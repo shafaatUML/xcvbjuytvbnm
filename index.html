@@ -1,0 +1,103 @@
+<!-- 
+    Author: Shafaat Osmani
+    Contact: Shafaat_Osmani@student.uml.edu
+    Date: 12/20/2022
+    GUI HW5 Scrabble Project
+
+    About this file: Main HTML file. Lays out ul's for board and rack as well as score/word visuals.  
+-->
+
+<html>
+
+<head>
+    <title>SCRABBLE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="ScrabbleHeader">
+        <h1>SCRABBLE</h1>
+    </div>
+
+    <!-- Content for Game -->
+    <div id="content">
+        <div id="instructions">
+            <h2>Drag tiles from tile rack onto the board to create a word. Press Submit to submit word or Reset to start
+                over.</h2>
+            <h2>Rules:</h2>
+            <p>1. Submit is only available if there are at least TWO tiles on the board and when word is valid</p>
+            <p>2. Place tiles next to one another, words with spaces in between are not valid</p>
+            <p>3. When the word is valid, the submit button will light up. Press to commit your word and to earn your
+                points</p>
+            <p>4. There are a limited number of tiles available, there is a different distribution for each tile</p>
+            <p>5. Using board squares with "Double Word Score" will double your score for the current round</p>
+        </div>
+
+        <!-- Submit and reset buttons, game score -->
+        <div id="information and reset">
+            <button id="reset" onClick="history.go(0);">Reset</button>
+            <!-- source: https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click -->
+            <button id="submit">Submit</button>
+        </div>
+        <div id="score">
+            <h3>Score: 0</h3>
+            <p>&nbsp</p>
+        </div>
+        <div id="wordbeingbuilt">
+            <h3>Word: </h3>
+            <p>&nbsp</p>
+        </div>
+
+        <!-- Board and Rack boxes -->
+        <div id="board">
+            <ul class="board_boxes">
+                <li id="index_0" value='0'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_1" value='1'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_2_DOUBLE_WORD_SCORE" value='2'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_3" value='3'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_4" value='4'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_5" value='5'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_6_DOUBLE_LTR_SCORE" value='6'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_7" value='7'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_8_DOUBLE_LTR_SCORE" value='8'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_9" value='9'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_10" value='10'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_11" value='11'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_12_DOUBLE_WORD_SCORE" value='12'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_13" value='13'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="index_14" value='14'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+            </ul>
+        </div>
+
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        </p>
+        <div id="rack">
+            <ul class="rack_boxes">
+
+                <li id="rindex_0" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_1" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_2" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_3" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_4" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_5" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li id="rindex_6" , data-letter="" , data-letval="" , data-index="">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Script Includes -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script src="js/java.js"></script>
+</body>
+
+</html>
